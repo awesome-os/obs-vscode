@@ -1,0 +1,146 @@
+{
+  "name": "obs-ghost",
+  "displayName": "OBS Studio 33 (b8g-ghost)",
+  "description": "MIT OBS Studio 33 extension for Awesome-OS Code - OSS & Eclipse Theia — instant b8g-ghost cas-v1 portable OBS hydration, HTML5 browser-source overlay hot-reload, and scene control",
+  "version": "0.1.0",
+  "publisher": "awesome-os",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/extension.mts",
+  "types": "./src/extension.mts",
+  "exports": {
+    ".": "./src/extension.mts"
+  },
+  "engines": {
+    "vscode": "^1.90.0",
+    "node": ">=22.18.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "keywords": [
+    "obs",
+    "obs-studio",
+    "b8g-ghost",
+    "cas-v1",
+    "awesome-os",
+    "code-oss",
+    "theia",
+    "overlay",
+    "streaming",
+    "recording"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awesome-os/obs-vscode.git"
+  },
+  "homepage": "https://github.com/awesome-os/obs-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/awesome-os/obs-vscode/issues"
+  },
+  "activationEvents": [
+    "onCommand:obsGhost.hydrate",
+    "onCommand:obsGhost.launch",
+    "onCommand:obsGhost.previewOverlay",
+    "onCommand:obsGhost.startRecording",
+    "onTaskType:obs-ghost"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "obsGhost.hydrate",
+        "title": "Hydrate Portable OBS Studio 33 (cas-v1)",
+        "category": "OBS Ghost"
+      },
+      {
+        "command": "obsGhost.launch",
+        "title": "Launch Portable OBS Studio 33",
+        "category": "OBS Ghost"
+      },
+      {
+        "command": "obsGhost.previewOverlay",
+        "title": "Preview HTML5 Browser-Source Overlay (Hot-Reload)",
+        "category": "OBS Ghost"
+      },
+      {
+        "command": "obsGhost.startRecording",
+        "title": "Start Recording",
+        "category": "OBS Ghost"
+      }
+    ],
+    "taskDefinitions": [
+      {
+        "type": "obs-ghost",
+        "required": [
+          "action"
+        ],
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "hydrate",
+              "launch",
+              "preview-overlay",
+              "start-recording"
+            ],
+            "description": "OBS Ghost lifecycle action to run."
+          },
+          "scene": {
+            "type": "string",
+            "description": "Target OBS Studio scene name."
+          },
+          "overlayPath": {
+            "type": "string",
+            "description": "Workspace-relative HTML5 overlay file for browser-source hot-reload."
+          },
+          "portable": {
+            "type": "boolean",
+            "default": true,
+            "description": "Launch OBS Studio in portable mode (--portable)."
+          },
+          "extraArgs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Additional CLI arguments forwarded to obs64.exe / obs."
+          }
+        }
+      }
+    ],
+    "configuration": {
+      "title": "OBS Ghost",
+      "properties": {
+        "obsGhost.indexUrl": {
+          "type": "string",
+          "default": "https://raw.githubusercontent.com/awesome-os/b8g-ghost/main/manifests/index.json",
+          "description": "b8g-ghost cas-v1 manifest index URL."
+        },
+        "obsGhost.cacheDir": {
+          "type": "string",
+          "default": "",
+          "description": "Optional override for local b8g-ghost CAS cache directory (defaults to ~/.b8g/cas)."
+        },
+        "obsGhost.pinnedSha256": {
+          "type": "string",
+          "default": "",
+          "description": "Optional Keep-Last-5 SHA-256 pin for OBS Studio cas-v1 artifact."
+        },
+        "obsGhost.portableMode": {
+          "type": "boolean",
+          "default": true,
+          "description": "Run OBS Studio in portable mode (--portable)."
+        },
+        "obsGhost.defaultScene": {
+          "type": "string",
+          "default": "",
+          "description": "Default OBS Studio scene selected on launch."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test test/obs-vscode.test.mts"
+  }
+}
