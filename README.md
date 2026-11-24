@@ -71,3 +71,15 @@ node --test test/obs-vscode.test.mts
 ## License
 
 MIT — see [`LICENSE`](./LICENSE). Upstream OBS Studio binaries hydrated from `awesome-os/b8g-ghost @ cas-v1` remain governed by the upstream OBS Project GNU GPL-2.0-or-later license.
+
+## Quick Install & Run (Windows / Linux / macOS)
+
+```powershell
+# Windows (PowerShell) — 1-line VSIX install into Code - OSS / VS Code
+gh release download -R awesome-os/obs-vscode -p "*.vsix" -O "obs-vscode.vsix" --clobber; code --install-extension "obs-vscode.vsix"
+```
+
+```sh
+# Linux & macOS — 1-line VSIX install into Code - OSS / VS Code
+gh release download -R awesome-os/obs-vscode -p "*.vsix" -O "obs-vscode.vsix" --clobber && code --install-extension "obs-vscode.vsix"
+```
