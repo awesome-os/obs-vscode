@@ -2,6 +2,31 @@
 
 MIT-licensed Open VSX / VS Code extension that hydrates portable **OBS Studio 33** (`obs-win64.tar.zst` `33.0.3`), `libsectium_display`, and `b8g-ghost-abi` directly from [`awesome-os/b8g-ghost @ cas-v1`](https://github.com/awesome-os/b8g-ghost/releases/tag/cas-v1) with HTML5 browser-source overlay hot-reload and scene control.
 
+## Install & Usage
+
+### 1-Command `.vsix` Install (Awesome-OS Code - OSS / Eclipse Theia / VS Code)
+
+```powershell
+gh release download -R awesome-os/obs-vscode --pattern "*.vsix" --dir "$HOME/.b8g/cas/extensions" --clobber
+```
+
+Or download the `.vsix` from [`Releases`](https://github.com/awesome-os/obs-vscode/releases/latest) and run `code-oss --install-extension <file>.vsix` (or install from Open VSX once published).
+
+### Usage
+
+Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run:
+
+- **OBS Ghost: Hydrate Portable OBS Studio 33 (cas-v1)** (`obsGhost.hydrate`)
+- **OBS Ghost: Launch Portable OBS Studio 33** (`obsGhost.launch`)
+- **OBS Ghost: Preview HTML5 Browser-Source Overlay (Hot-Reload)** (`obsGhost.previewOverlay`)
+- **OBS Ghost: Start Recording** (`obsGhost.startRecording`)
+
+Run tests locally (Node.js 22+):
+
+```powershell
+node --test test/*.test.mts
+```
+
 ## Features
 
 - **Zero-Installer `cas-v1` Hydration:** Resolves `obs-win64.tar.zst` (`33.0.3`), `libsectium_display`, and `b8g-ghost-abi` from `awesome-os/b8g-ghost` with SHA-256 content addressing and Keep-Last-5 pinning.
