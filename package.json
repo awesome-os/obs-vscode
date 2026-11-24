@@ -2,7 +2,7 @@
   "name": "obs-ghost",
   "displayName": "OBS Studio 33 (b8g-ghost)",
   "description": "MIT OBS Studio 33 extension for Awesome-OS Code - OSS & Eclipse Theia — instant b8g-ghost cas-v1 portable OBS hydration, HTML5 browser-source overlay hot-reload, and scene control",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "awesome-os",
   "license": "MIT",
   "type": "module",
@@ -12,7 +12,7 @@
     ".": "./src/extension.mts"
   },
   "engines": {
-    "vscode": "^1.90.0",
+    "vscode": "^1.85.0",
     "node": ">=22.18.0"
   },
   "categories": [
