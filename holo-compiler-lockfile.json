@@ -1,0 +1,40 @@
+{
+  "schema": "holo-compiler-lockfile-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "repo": "awesome-os/obs-vscode",
+  "targets": [
+    "win64",
+    "linux-x64",
+    "linux-arm64",
+    "macos-arm64",
+    "wasm32-wasi"
+  ],
+  "generatedAt": "2026-11-24T23:53:02.473Z",
+  "dependencies": [
+    {
+      "id": "awesome-os/obs-vscode/obs-ghost-0.2.0.vsix",
+      "kind": "vsix",
+      "version": "v0.2.0",
+      "target": "any",
+      "sha512": "28477fc5d0d580e0da5b5bb97856b5888bcc7204ccb7af9451023481f4f3e0e1b49e8fe22bb34df761ca791919f18d4032fbe6e0dbfe43fdec9f730d547f9fef",
+      "size": 11661,
+      "executable": false,
+      "blob": "v11/files/28/28477fc5d0d580e0da5b5bb97856b5888bcc7204ccb7af9451023481f4f3e0e1b49e8fe22bb34df761ca791919f18d4032fbe6e0dbfe43fdec9f730d547f9fef",
+      "url": "https://github.com/awesome-os/obs-vscode/releases/download/v0.2.0/obs-ghost-0.2.0.vsix",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/obs-vscode/SHA256SUMS.txt",
+      "kind": "object",
+      "version": "v0.2.0",
+      "target": "any",
+      "sha512": "5a8232bedd40c18811567429b117463dff73dbd3c3d4cba47cc3789b3984b7b1618ef6c131e6a10a51f0bfd470e480f25e6bd95c4cea4e6ffdf4bcfecc25b5c1",
+      "size": 87,
+      "executable": false,
+      "blob": "v11/files/5a/5a8232bedd40c18811567429b117463dff73dbd3c3d4cba47cc3789b3984b7b1618ef6c131e6a10a51f0bfd470e480f25e6bd95c4cea4e6ffdf4bcfecc25b5c1",
+      "url": "https://github.com/awesome-os/obs-vscode/releases/download/v0.2.0/SHA256SUMS.txt",
+      "dependencies": []
+    }
+  ]
+}
