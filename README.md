@@ -74,12 +74,10 @@ MIT — see [`LICENSE`](./LICENSE). Upstream OBS Studio binaries hydrated from `
 
 ## Quick Install & Run (Windows / Linux / macOS)
 
-```powershell
-# Windows (PowerShell) — 1-line VSIX install into Code - OSS / VS Code
-gh release download -R awesome-os/obs-vscode -p "*.vsix" -O "obs-vscode.vsix" --clobber; code --install-extension "obs-vscode.vsix"
-```
-
 ```sh
-# Linux & macOS — 1-line VSIX install into Code - OSS / VS Code
-gh release download -R awesome-os/obs-vscode -p "*.vsix" -O "obs-vscode.vsix" --clobber && code --install-extension "obs-vscode.vsix"
+# Install / hydrate from v11 CAS via holo-pm
+holo-pm install repository://github.com/awesome-os/obs-vscode@main
+
+# Or project & run directly via holo-project (0-byte hardlink)
+holo-project "project://node/obs-vscode?from=repository://github.com/awesome-os/obs-vscode@main"
 ```
