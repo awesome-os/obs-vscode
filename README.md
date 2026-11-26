@@ -1,3 +1,5 @@
+> [!NOTE] Consolidated into https://github.com/awesome-os/devtools
+
 # OBS Studio 33 (`obs-ghost`) for Awesome-OS Code - OSS & Eclipse Theia
 
 MIT-licensed Open VSX / VS Code extension that hydrates portable **OBS Studio 33** (`obs-win64.tar.zst` `33.0.3`), `libsectium_display`, and `b8g-ghost-abi` directly from [`awesome-os/b8g-ghost @ cas-v1`](https://github.com/awesome-os/b8g-ghost/releases/tag/cas-v1) with HTML5 browser-source overlay hot-reload and scene control.
